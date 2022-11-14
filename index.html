@@ -23,8 +23,8 @@
                     <div class="left-wrapper">
                         <a href="index.html" class="navigation-logo"><span class="logo1">Web</span><span class="logo2">Studio</span></a>
                         <ul class="bullets navigation-list">
-                        <li class="navigation-list-item"><a class="text-agencja link" href="index.html">Agencja</a></li>
-                        <li class="navigation-list-item"><a class="text-portfolio link" href="portfolio.html">Portfolio</a></li>
+                        <li class="navigation-list-item"><a class="text-agencja agencja-active link" href="index.html">Agencja</a></li>
+                        <li class="navigation-list-item"><a class="text-portfolio  link" href="portfolio.html">Portfolio</a></li>
                         <li class="navigation-list-item"><a class="text-kontakt link" href="Kontakt">Kontakt</a></li>
                         </ul>
                     </div>
@@ -46,8 +46,13 @@
     <section >
         <div class="header-container container">
             <h1 class="index-main-header">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU </h1>
-            <button class="index-button" type="button">Zamów usługę</button>
+            <button type="button" class="index-button "data-modal-open >Zamów usługę</button>
         </div>
+        <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close><span>X</span></button>
+        </div>
+    </div>
     </section>    
     <section class="section no-padding-bottom">   
         <div class="container ">
@@ -104,13 +109,28 @@
         <h2 class="text-pictures-header1">Czym sie zajmujemy</h2>
         <ul class="bullets pictures-whatwedo">
             <li class="pic-whatwedo">
-                <img src="images/whatwedo1.jpg" alt="rece piszące na klawiaturze przed ekranem" width="370" height="294">
+                <div class="whatwedo-overlay">
+                    <img src="images/whatwedo1.jpg" alt="rece piszące na klawiaturze przed ekranem" width="370" height="294">
+                    <div class="overlay-text">
+                    <p>aplikacje komputerowe</p> 
+                    </div>
+                </div>
             </li>
             <li class="pic-whatwedo">
+                <div class="whatwedo-overlay">
                 <img src="images/whatwedo2.jpg" alt="lewa ręka trzymajaca telfon komórkowy prawa na klawiaturze laptopa" width="370" height="294">
+                <div class="overlay-text">
+                    <p>aplikacje mobilne</p> 
+                    </div>
+                </div>
             </li>
             <li class="pic-whatwedo">
+                <div class="whatwedo-overlay">
                 <img src="images/whatwedo3.jpg" alt="lewa ręka trzymajaca tablet nad klawiaturą na biurku" width="370" height="294">
+                <div class="overlay-text">
+                    <p>rozwiązania graficzne</p> 
+                    </div>
+                </div>
             </li> 
         </ul>
     </div>
@@ -306,5 +326,6 @@
               </div>
     </section>
 </footer>
+<script src="./js/modal.js"></script>
 </body>
 </html>
