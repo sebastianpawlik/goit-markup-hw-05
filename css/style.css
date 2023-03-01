@@ -618,6 +618,7 @@ figure {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   transition: transform 250ms;
+  z-index: 1;
 }
 
 .modal {
